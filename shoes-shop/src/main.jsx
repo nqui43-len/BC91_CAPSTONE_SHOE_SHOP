@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import "./assets/css/style.css"; //CSS của toàn bài
 
 // Import Menu
 import Header from "./components/Header";
