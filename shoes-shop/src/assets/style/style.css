@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Khai báo các màu sắc lấy từ Figma bằng công cụ hút màu */
+  --bg-dark: #000000;
+  --text-white: #FFFFFF;
+  --text-dark: #000000;
+  --bg-button-buy: #E8E8E8;
+  --color-button-buy: #000000;
+  --bg-button-price: #FDD768;
+  --gradient-btn: linear-gradient(180deg, #F051D9 0%, #7B1BD3 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}

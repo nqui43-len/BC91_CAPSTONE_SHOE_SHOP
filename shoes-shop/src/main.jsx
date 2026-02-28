@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
-import "./assets/CSS/style.css";
+import "./assets/style/style.css";
 
 // Import Menu
 import Header from "./components/Header";
