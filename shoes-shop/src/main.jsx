@@ -16,25 +16,24 @@ import Profile from "./pages/Profile";
 import Carts from "./pages/Carts";
 import Search from "./pages/Search";
 import Detail from "./pages/Detail";
+import HomeTemplate from "./templates/HomeTemplate";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Provider store={store}>
-      {/* Header nằm ngoài Routes để luôn hiển thị */}
-      <Header />
-
-      {/* Nội dung các trang */}
-      <div style={{ padding: "20px" }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/carts" element={<Carts />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/detail/:id" element={<Detail />} />
-        </Routes>
-      </div>
+      <Routes>
+        {/*Khai báo Route cha sử dụng HomeTemplate */}
+        <Route path="" element={<HomeTemplate />}>
+        {/* Các Route con sẽ được bơm vào thẻ <Outlet /> của HomeTemplate */}
+          <Route index element={<Home />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="carts" element={<Carts />} />
+          <Route path="search" element={<Search />} />
+          <Route path="detail/:id" element={<Detail />} />
+        </Route>
+      </Routes>
     </Provider>
-  </BrowserRouter>,
+  </BrowserRouter>
 );
